@@ -1,0 +1,106 @@
+.home {
+    &-hero {
+        background-color: $light-background;
+        padding: $spacing-3xl 0;
+        text-align: center;
+
+        @media (min-width: $breakpoint-md) {
+            text-align: left;
+            
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: $spacing-2xl;
+                align-items: center;
+            }
+        }
+
+        &-content {
+            margin-bottom: $spacing-2xl;
+
+            @media (min-width: $breakpoint-md) {
+                margin-bottom: 0;
+            }
+        }
+
+        &-title {
+            font-size: $font-size-3xl;
+            color: $text-color;
+            margin-bottom: $spacing-lg;
+            line-height: 1.2;
+        }
+
+        &-subtitle {
+            font-size: $font-size-lg;
+            color: $light-text;
+            margin-bottom: $spacing-xl;
+            line-height: 1.6;
+        }
+
+        &-buttons {
+            display: flex;
+            gap: $spacing-md;
+            justify-content: center;
+
+            @media (min-width: $breakpoint-md) {
+                justify-content: flex-start;
+            }
+        }
+
+        &-image {
+            img {
+                border-radius: $border-radius-lg;
+                box-shadow: $shadow-lg;
+            }
+        }
+    }
+
+    &-services {
+        padding: $spacing-3xl 0;
+
+        &-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: $spacing-xl;
+            margin-top: $spacing-2xl;
+        }
+    }
+
+    &-about {
+        background-color: $light-background;
+        padding: $spacing-3xl 0;
+
+        .container {
+            @media (min-width: $breakpoint-md) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: $spacing-2xl;
+                align-items: center;
+            }
+        }
+    }
+
+    &-testimonials {
+        padding: $spacing-3xl 0;
+        text-align: center;
+
+        &-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: $spacing-xl;
+            margin-top: $spacing-2xl;
+        }
+    }
+
+    &-cta {
+        background-color: $primary-color;
+        color: white;
+        padding: $spacing-3xl 0;
+        text-align: center;
+
+        h2 {
+            color: white;
+            margin-bottom: $spacing-xl;
+        }
+    }
+}

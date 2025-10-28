@@ -1,0 +1,57 @@
+.header {
+    padding-top: 70px; // Account for fixed navigation
+    background-color: $light-background;
+
+    &-content {
+        padding: $spacing-3xl 0;
+        text-align: center;
+
+        @media (min-width: $breakpoint-md) {
+            text-align: left;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: $spacing-2xl;
+            align-items: center;
+        }
+    }
+
+    &-title {
+        font-size: $font-size-3xl;
+        color: $text-color;
+        margin-bottom: $spacing-lg;
+
+        @media (min-width: $breakpoint-md) {
+            font-size: $font-size-3xl * 1.2;
+        }
+    }
+
+    &-subtitle {
+        font-size: $font-size-lg;
+        color: $light-text;
+        margin-bottom: $spacing-xl;
+        line-height: 1.6;
+    }
+
+    &-buttons {
+        display: flex;
+        gap: $spacing-md;
+        justify-content: center;
+
+        @media (min-width: $breakpoint-md) {
+            justify-content: flex-start;
+        }
+    }
+
+    &-image {
+        margin-top: $spacing-xl;
+        
+        @media (min-width: $breakpoint-md) {
+            margin-top: 0;
+        }
+
+        img {
+            border-radius: $border-radius-lg;
+            box-shadow: $shadow-lg;
+        }
+    }
+}

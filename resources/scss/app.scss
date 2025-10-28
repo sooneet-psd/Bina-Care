@@ -1,0 +1,23 @@
+// Variables
+@import 'variables';
+
+// Base styles
+@import 'base';
+
+// Components
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/navigation';
+@import 'components/cards';
+
+// Layouts
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/sidebar';
+
+// Pages
+@import 'pages/home';
+@import 'pages/services';
+@import 'pages/contact';
+@import 'pages/blog';
+@import 'pages/admin';

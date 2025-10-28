@@ -1,0 +1,107 @@
+.nav {
+    background-color: $background;
+    box-shadow: $shadow-sm;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: $z-index-fixed;
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+    }
+
+    &-brand {
+        font-size: $font-size-xl;
+        font-weight: 700;
+        color: $primary-color;
+    }
+
+    &-menu {
+        display: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        @media (min-width: $breakpoint-md) {
+            display: flex;
+            align-items: center;
+        }
+
+        li {
+            margin-left: $spacing-lg;
+        }
+
+        a {
+            color: $text-color;
+            font-weight: 500;
+
+            &:hover, &.active {
+                color: $primary-color;
+            }
+        }
+    }
+
+    &-toggle {
+        display: block;
+        background: none;
+        border: none;
+        padding: $spacing-xs;
+        cursor: pointer;
+
+        @media (min-width: $breakpoint-md) {
+            display: none;
+        }
+
+        span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: $text-color;
+            margin: 5px 0;
+            transition: $transition-base;
+        }
+
+        &.active {
+            span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            span:nth-child(2) {
+                opacity: 0;
+            }
+            span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+        }
+    }
+
+    &-mobile {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: $background;
+        padding: $spacing-md;
+        box-shadow: $shadow-md;
+
+        &.active {
+            display: block;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            display: none !important;
+        }
+
+        .nav-menu {
+            display: block;
+
+            li {
+                margin: $spacing-sm 0;
+            }
+        }
+    }
+}

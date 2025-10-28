@@ -1,0 +1,50 @@
+.form {
+    &-group {
+        margin-bottom: $spacing-lg;
+    }
+
+    &-label {
+        display: block;
+        margin-bottom: $spacing-xs;
+        font-weight: 600;
+        color: $text-color;
+    }
+
+    &-control {
+        width: 100%;
+        padding: $spacing-sm;
+        border: 1px solid $border-color;
+        border-radius: $border-radius-md;
+        font-size: $font-size-base;
+        transition: $transition-base;
+
+        &:focus {
+            outline: none;
+            border-color: $primary-color;
+            box-shadow: 0 0 0 2px rgba($primary-color, 0.2);
+        }
+
+        &.is-invalid {
+            border-color: #dc3545;
+        }
+    }
+
+    &-error {
+        color: #dc3545;
+        font-size: $font-size-sm;
+        margin-top: $spacing-xs;
+    }
+
+    textarea.form-control {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    select.form-control {
+        appearance: none;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath fill='%23718096' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right $spacing-sm center;
+        padding-right: $spacing-xl;
+    }
+}

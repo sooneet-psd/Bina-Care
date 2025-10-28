@@ -1,0 +1,75 @@
+// Reset and base styles
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $font-size-base;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-family-primary;
+    color: $text-color;
+    line-height: 1.6;
+    background-color: $background;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-secondary;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: $spacing-md;
+}
+
+h1 {
+    font-size: $font-size-3xl;
+}
+
+h2 {
+    font-size: $font-size-2xl;
+}
+
+h3 {
+    font-size: $font-size-xl;
+}
+
+p {
+    margin-bottom: $spacing-md;
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+    transition: $transition-base;
+
+    &:hover {
+        color: darken($primary-color, 10%);
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+
+    @media (min-width: $breakpoint-sm) {
+        padding: 0 $spacing-lg;
+    }
+}
+
+.section {
+    padding: $spacing-2xl 0;
+
+    @media (min-width: $breakpoint-md) {
+        padding: $spacing-3xl 0;
+    }
+}
